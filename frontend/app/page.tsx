@@ -86,7 +86,7 @@ export default function Page() {
     localStorage.removeItem('username')
   }
 
-  const handleAddGame = async (newGameData: { id: string; title: string; platform: string; completed: boolean }) => {
+  const handleAddGame = async (newGameData: { title: string; platform: string; completed: boolean }) => {
     if (!token) return
     try {
       const { title, platform, completed } = newGameData
@@ -283,4 +283,3 @@ export default function Page() {
     </main>
   )
 }
-

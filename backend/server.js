@@ -9,12 +9,12 @@ const Game = require('./models/Game');
 const authMiddleware = require('./middleware/auth');
 // Trigger comment 2
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to Database
 connectDB();
 
-// Middleware
+// Middleware - Fixed localhost:5000 to localhost:3000 to match frontend
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true

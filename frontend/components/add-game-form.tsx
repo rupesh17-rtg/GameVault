@@ -5,7 +5,6 @@ import { Plus } from 'lucide-react'
 
 interface AddGameFormProps {
   onAddGame: (game: {
-    id: string
     title: string
     platform: string
     completed: boolean
@@ -21,7 +20,6 @@ export function AddGameForm({ onAddGame }: AddGameFormProps) {
     e.preventDefault()
     if (title.trim()) {
       onAddGame({
-        id: Date.now().toString(),
         title,
         platform,
         completed,
