@@ -25,7 +25,7 @@ export default function Page() {
   const [currentView, setCurrentView] = useState<'home' | 'collection'>('home')
   const [searchQuery, setSearchQuery] = useState('')
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+  const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/$/, '')
 
   // Load auth state from localStorage on mount
   useEffect(() => {

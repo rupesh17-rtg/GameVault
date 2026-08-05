@@ -29,4 +29,5 @@ ehthumbs.db
 Desktop.ini
 .vercel
 .env*
+!.env.example
 *.tsbuildinfo
